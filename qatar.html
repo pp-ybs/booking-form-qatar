@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qatar – Booking T&C / الشروط والأحكام</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAF8F4;
+    --dark: #1C1C1A;
+    --mid: #6B6860;
+    --light: #E8E4DC;
+    --accent: #C4855A;
+    --accent-light: #F5EDE5;
+    --red: #C0392B;
+    --radius: 10px;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .page-header {
+    background: var(--dark);
+    padding: 28px 24px 24px;
+    text-align: center;
+  }
+  .page-header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+  }
+  .page-header .arabic {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+    direction: rtl;
+  }
+
+  .form-container {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 28px 20px 60px;
+  }
+
+  .section {
+    margin-bottom: 28px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--light);
+  }
+  .section-num {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--dark);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .section-title-ar {
+    font-size: 12px;
+    color: var(--mid);
+    direction: rtl;
+  }
+
+  .field {
+    margin-bottom: 16px;
+  }
+
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--dark);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  label .ar {
+    display: block;
+    direction: rtl;
+    font-size: 12px;
+    color: var(--mid);
+    margin-top: 1px;
+  }
+  .req { color: var(--red); margin-left: 2px; }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    background: #fff;
+    border: 1px solid var(--light);
+    border-radius: var(--radius);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--dark);
+    outline: none;
+    transition: border-color 0.15s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  textarea {
+    height: 80px;
+    padding: 12px 14px;
+    resize: vertical;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--accent);
+  }
+  input::placeholder, textarea::placeholder { color: #B5B0A6; font-size: 14px; }
+
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6860' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+
+  .name-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    gap: 8px;
+  }
+
+  .phone-row {
+    display: flex;
+    gap: 8px;
+  }
+  .phone-row select { width: 110px; flex-shrink: 0; }
+  .phone-row input { flex: 1; }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 2px;
+    flex-wrap: wrap;
+  }
+  .radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--dark);
+    padding: 9px 16px;
+    background: #fff;
+    border: 1px solid var(--light);
+    border-radius: var(--radius);
+    transition: border-color 0.15s, background 0.15s;
+    user-select: none;
+    flex: 1;
+    min-width: 80px;
+    justify-content: center;
+  }
+  .radio-label:has(input:checked) {
+    border-color: var(--accent);
+    background: var(--accent-light);
+  }
+  .radio-label input { display: none; }
+
+  .tc-box {
+    background: #fff;
+    border: 1px solid var(--light);
+    border-radius: var(--radius);
+    padding: 16px;
+    max-height: 220px;
+    overflow-y: auto;
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: var(--mid);
+    margin-bottom: 14px;
+  }
+  .tc-box h4 {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--dark);
+    margin-top: 14px;
+    margin-bottom: 4px;
+  }
+  .tc-box h4:first-child { margin-top: 0; }
+  .tc-box p { margin-bottom: 8px; text-align: left; direction: ltr; }
+  .tc-box .ar-text {
+    direction: rtl;
+    text-align: right;
+    font-size: 11.5px;
+    color: #9B9790;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--light);
+  }
+
+  .tc-scroll-hint {
+    text-align: center;
+    font-size: 11px;
+    color: var(--mid);
+    margin-top: -10px;
+    margin-bottom: 14px;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 13.5px;
+    color: var(--dark);
+    line-height: 1.5;
+    padding: 12px 14px;
+    background: #fff;
+    border: 1px solid var(--light);
+    border-radius: var(--radius);
+    transition: border-color 0.15s;
+    margin-bottom: 14px;
+  }
+  .checkbox-label:has(input:checked) {
+    border-color: var(--accent);
+    background: var(--accent-light);
+  }
+  .checkbox-label input[type="checkbox"] { display: none; }
+  .custom-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--light);
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    background: #fff;
+  }
+  .checkbox-label:has(input:checked) .custom-checkbox {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .checkbox-label:has(input:checked) .custom-checkbox::after {
+    content: '';
+    width: 10px;
+    height: 6px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg) translateY(-1px);
+    display: block;
+  }
+
+  .sig-area {
+    background: #fff;
+    border: 1px solid var(--light);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 6px;
+  }
+  .sig-area canvas {
+    display: block;
+    width: 100%;
+    height: 130px;
+    touch-action: none;
+    cursor: crosshair;
+  }
+  .sig-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px 10px;
+    border-top: 1px solid var(--light);
+    background: var(--cream);
+  }
+  .sig-clear {
+    font-size: 12px;
+    color: var(--mid);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+  }
+  .sig-clear:hover { background: var(--light); }
+  .sig-hint {
+    font-size: 11px;
+    color: var(--mid);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    height: 52px;
+    background: var(--dark);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    letter-spacing: 0.01em;
+    margin-top: 8px;
+  }
+  .submit-btn:hover { background: #333; }
+  .submit-btn:active { transform: scale(0.99); }
+  .submit-btn:disabled { background: #B5B0A6; cursor: not-allowed; }
+
+  .submit-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--mid);
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  .error-msg {
+    font-size: 12px;
+    color: var(--red);
+    margin-top: 4px;
+    display: none;
+  }
+  .field.has-error input,
+  .field.has-error select,
+  .field.has-error textarea {
+    border-color: var(--red);
+  }
+
+  .success-screen {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .success-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--accent-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 28px;
+  }
+  .success-screen h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .success-screen p {
+    font-size: 14px;
+    color: var(--mid);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .loading-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(28,28,26,0.5);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .loading-overlay.active { display: flex; }
+  .spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  .loading-overlay span { color: #fff; font-size: 14px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  @media (max-width: 400px) {
+    .name-row { grid-template-columns: 90px 1fr; }
+    .name-row input:last-child { grid-column: 1 / -1; }
+    .two-col { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="spinner"></div>
+  <span>Submitting your form...</span>
+</div>
+
+<div class="page-header">
+  <h1>Qatar – Booking T&C</h1>
+  <div class="arabic">الشروط والأحكام – قطر</div>
+</div>
+
+<div class="form-container" id="formContainer">
+
+  <form id="bookingForm" novalidate>
+
+    <!-- SECTION 1: Contact Info -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <div>
+          <div class="section-title">Contact Information</div>
+          <div class="section-title-ar">معلومات التواصل</div>
+        </div>
+      </div>
+
+      <div class="field" id="field-name">
+        <label>Name / الاسم <span class="req">*</span></label>
+        <div class="name-row">
+          <select id="title" name="title">
+            <option value="">Title</option>
+            <option value="Mrs.">Mrs.</option>
+            <option value="Mr.">Mr.</option>
+            <option value="Ms.">Ms.</option>
+          </select>
+          <input type="text" id="firstName" name="firstName" placeholder="First name" autocomplete="given-name">
+          <input type="text" id="lastName" name="lastName" placeholder="Last name" autocomplete="family-name">
+        </div>
+        <div class="error-msg" id="err-name">Please enter your name</div>
+      </div>
+
+      <div class="field" id="field-email">
+        <label>Email / البريد الإلكتروني <span class="req">*</span></label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email">
+        <div class="error-msg" id="err-email">Please enter a valid email</div>
+      </div>
+
+      <div class="field" id="field-phone">
+        <label>Phone / رقم الهاتف <span class="req">*</span></label>
+        <div class="phone-row">
+          <select id="phoneCode" name="phoneCode">
+            <option value="+971">🇦🇪 +971</option>
+            <option value="+966">🇸🇦 +966</option>
+            <option value="+974">🇶🇦 +974</option>
+            <option value="+968">🇴🇲 +968</option>
+            <option value="+973">🇧🇭 +973</option>
+            <option value="+965">🇰🇼 +965</option>
+            <option value="+91">🇮🇳 +91</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+1">🇺🇸 +1</option>
+            <option value="+other">Other</option>
+          </select>
+          <input type="tel" id="phone" name="phone" placeholder="50 000 0000">
+        </div>
+        <div class="error-msg" id="err-phone">Please enter your phone number</div>
+      </div>
+
+      <div class="field" id="field-firstSession">
+        <label>Is this your first session with You+Baby Studio? / هل هذه جلستك الأولى مع يو بيبي استوديو؟ <span class="req">*</span></label>
+        <div class="radio-group">
+          <label class="radio-label"><input type="radio" name="firstSession" value="Yes"> Yes</label>
+          <label class="radio-label"><input type="radio" name="firstSession" value="No"> No</label>
+        </div>
+        <div class="error-msg" id="err-firstSession">Please select an option</div>
+      </div>
+
+      <div class="field" id="field-sessionType">
+        <label>Type of session? / ما هو نوع الجلسة؟ <span class="req">*</span></label>
+        <select id="sessionType" name="sessionType" onchange="toggleBabySection(this.value)">
+          <option value="">Select session type...</option>
+          <option value="Newborn or Infant or Sitter">Newborn or Infant or Sitter</option>
+          <option value="Cake Smash or Children">Cake Smash or Children</option>
+          <option value="Others">Others</option>
+        </select>
+        <div class="error-msg" id="err-sessionType">Please select a session type</div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: Baby Info + Health (hidden for Others) -->
+    <div class="section" id="section-baby" style="display:none;">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <div>
+          <div class="section-title">Baby Information & Health</div>
+          <div class="section-title-ar">معلومات الطفل والصحة</div>
+        </div>
+      </div>
+
+      <div class="field" id="field-babyBirthDate">
+        <label>Baby Birth Date / عيد ميلاد البيبي <span class="req">*</span></label>
+        <input type="date" id="babyBirthDate" name="babyBirthDate">
+        <div class="error-msg" id="err-babyBirthDate">Please enter the baby's birth date</div>
+      </div>
+
+      <div class="field" id="field-babyName">
+        <label>What's the baby name? / ما هو اسم البيبي؟ <span class="req">*</span></label>
+        <input type="text" id="babyName" name="babyName" placeholder="Baby's name">
+        <div class="error-msg" id="err-babyName">Please enter the baby's name</div>
+      </div>
+
+      <div class="two-col">
+        <div class="field" id="field-babyGender">
+          <label>What's the baby gender? / ما هو جنس البيبي؟ <span class="req">*</span></label>
+          <select id="babyGender" name="babyGender">
+            <option value="">Select...</option>
+            <option value="Male">Male / ذكر</option>
+            <option value="Female">Female / أنثى</option>
+          </select>
+          <div class="error-msg" id="err-babyGender">Please select</div>
+        </div>
+        <div class="field" id="field-babyWeight">
+          <label>What's the baby weight? / ما هو وزن البيبي؟ <span class="req">*</span></label>
+          <input type="text" id="babyWeight" name="babyWeight" placeholder="e.g. 3.5 kg">
+          <div class="error-msg" id="err-babyWeight">Please enter weight</div>
+        </div>
+      </div>
+
+      <div class="field" id="field-weeksBorn">
+        <label>At how many weeks the baby has been born? / في أي شهر من شهور الحمل ولد البيبي؟ <span class="req">*</span></label>
+        <input type="text" id="weeksBorn" name="weeksBorn" placeholder="e.g. 38">
+        <div class="error-msg" id="err-weeksBorn">Please answer this question</div>
+      </div>
+
+      <div class="field" id="field-complications">
+        <label>Did you encounter any complications during the delivery? / هل واجهتك أى صعوبات أثناء الولادة؟ <span class="req">*</span></label>
+        <textarea id="complications" name="complications" placeholder="Please describe or write 'No'"></textarea>
+        <div class="error-msg" id="err-complications">Please answer this question</div>
+      </div>
+
+      <div class="field" id="field-nicu">
+        <label>Admission to NICU after birth? / هل تم وضع البيبي في العناية المركزة لحديثي الولادة بعد ولادته؟ <span class="req">*</span></label>
+        <div class="radio-group">
+          <label class="radio-label"><input type="radio" name="nicu" value="Yes"> Yes</label>
+          <label class="radio-label"><input type="radio" name="nicu" value="No"> No</label>
+        </div>
+        <div class="error-msg" id="err-nicu">Please select an option</div>
+      </div>
+
+      <div class="field" id="field-circumcised">
+        <label>Has your baby been recently circumcised? / هل تم ختان طفلك مؤخراً؟ <span class="req">*</span></label>
+        <div class="radio-group">
+          <label class="radio-label"><input type="radio" name="circumcised" value="Yes"> Yes</label>
+          <label class="radio-label"><input type="radio" name="circumcised" value="No"> No</label>
+        </div>
+        <div class="error-msg" id="err-circumcised">Please select an option</div>
+      </div>
+
+      <div class="field">
+        <label>Are there any other health and safety considerations we should know before photographing your baby? / هل هناك اعتبارات صحية وسلامة أخرى يجب أن نعرفها؟</label>
+        <textarea id="otherHealth" name="otherHealth" placeholder="Any additional notes (optional)"></textarea>
+      </div>
+    </div>
+
+    <!-- SECTION 3: T&C + Signature -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <div>
+          <div class="section-title">Terms & Conditions</div>
+          <div class="section-title-ar">الشروط والأحكام</div>
+        </div>
+      </div>
+
+      <div class="tc-box" id="tcBox">
+
+        <h4>1. Parental Supervision</h4>
+        <p>You are required to be present and actively supervise your Child/Children throughout the entire duration of the Session. This ensures a safe and comfortable environment for all parties involved. You are responsible for the behavior of your Child/Children during the Session and should address any concerns or issues that may arise promptly.</p>
+        <p>Parents/guardians will be held responsible for any damage to company belongings, assets, or property caused during the session, whether conducted in the studio or as a home service.</p>
+        <p>Compensation for damages will be determined by the management and may include either repair or full replacement of the affected asset or product, depending on the nature of the damage.</p>
+        <p class="ar-text"><strong>إشراف الوالدين</strong><br>
+        يتعين عليك أن تكون حاضرًا وتشرف بشكل فعال على طفلك/أطفالك طوال مدة الجلسة بأكملها وهذا يضمن بيئة آمنة ومريحة لجميع الأطراف المعنية.<br>
+        أنت مسؤول عن سلوك طفلك/أطفالك أثناء الجلسة ويجب عليك معالجة أي مخاوف أو مشكلات قد تنشأ على الفور.<br>
+        سيكون الآباء/الأوصياء مسؤولين عن أي ضرر يلحق بممتلكات الشركة أو أصولها أثناء الجلسة، سواء تم إجراؤها في الاستوديو أو كخدمة منزلية وسيتم تحديد التعويض عن الأضرار من قبل الإدارة وقد يشمل إما الإصلاح أو الاستبدال الكامل لأصل المنتج المتضرر حسب طبيعة الضرر.</p>
+
+        <h4>2. Limitation of Liability</h4>
+        <p>Photography sessions inherently involve some level of risk, including minor injuries, accidents, or unforeseen circumstances. While we are committed to taking reasonable precautions, it is important to understand and acknowledge that we will not be held liable for any injuries, damages, losses, or other liabilities arising during or as a result of the Session. In the event of unforeseen circumstances, including accidents, injuries, or equipment malfunctions, we will not be held responsible for resulting damages, losses, or injuries.</p>
+        <p class="ar-text"><strong>حدود المسئولية</strong><br>
+        تنطوي جلسات التصوير الفوتوغرافي بطبيعتها على مستوى معين من المخاطر، بما في ذلك الإصابات الطفيفة أو الحوادث أو الظروف غير المتوقعة. وبينما نحن ملتزمون باتخاذ الاحتياطات المعقولة، من المهم أن نفهم ونقر بأننا لن قد نتحمل المسؤولية عن أي إصابات أو أضرار أو خسائر أو التزامات أخرى تنشأ أثناء الجلسة أو نتيجة لها. في حالة حدوث ظروف غير متوقعة، بما في ذلك الحوادث أو الإصابات أو أعطال المعدات، لن نتحمل المسؤولية عن الأضرار أو الخسائر أو الإصابات الناتجة عن ذلك</p>
+
+        <h4>3. Undertaking by Parents</h4>
+        <p>Parents acknowledge that they are responsible for the well-being, safety, and conduct of your Child/Children during the Session. In the event of any issues, emergencies, or unforeseen circumstances involving your Child/Children, you agree to take immediate charge and responsibility for resolving the situation.</p>
+        <p class="ar-text"><strong>تعهد أولياء الأمور</strong><br>
+        يقر الوالدان بأنهما مسؤولان عن صحة وسلامة وسلوك الطفل/الأطفال خلال الجلسة. في حالة حدوث أي مشكلات أو حالات طارئة أو ظروف غير متوقعة تتعلق بطفلك/ أطفالك، فإنك توافق على تحمل المسؤولية الفورية والمسؤولية لحل الموقف</p>
+
+        <h4>4. Photographic Materials</h4>
+        <p>All photographic materials, including but not limited to negatives, transparencies, proofs, and previews, shall be the exclusive property of the Studio. The Studio will provide only the digital photos only in JPG format via online link with a password or could be available at our studio for an arranged pick up by your USB. These proofs shall be available to the Client within 3 Weeks from the date of the session. If an online proofing gallery delivered, it shall remain open for 120 days from delivery. The RAW format of the images will not be provided. The company will be storing the picture 120 Days since the day of the session.</p>
+        <p class="ar-text"><strong>الصور</strong><br>
+        جميع المواد التصويرية والتى تشمل على سبيل المثال وليس الحصر على المواد السلبية و البراهين و صور العرض المسبقة تعتبر ملكية حصرية للاستديو.<br>
+        سيقوم الاستوديو بتوفير الصور الديجيتال فى صيغة الجى بى جى عن طريق رابط الكترونى مدعم بكلمة سر و يمكن اتاحتها عن طريق يو اس بى يحضرها العميل.<br>
+        يتم توفير الصور للعميل خلال 3 أسابيع من يوم الجلسة ويبقى الرابط مفعل لمدة 120 يوم من وقت الإرسال للعميل.<br>
+        ويحتفظ الاستديو بالصور لمدة 120 يوم فقط من يوم الجلسة. لا يتم توفير الصور الـ RAW.</p>
+
+        <h4>5. Extra Pictures</h4>
+        <p>The price for an extra edited image is 85 QAR and the minimum amount to purchase is 3 images.</p>
+        <p class="ar-text"><strong>الصور الإضافية</strong><br>
+        سعر الصورة الإضافية المعدلة هو 85 ريال قطري<br>
+        والحد الأدنى لتعديل الصور هو 3 صور</p>
+
+        <h4>6. Unedited Images</h4>
+        <p>Unedited images purpose is only to preview and the pictures will be provided in JPG low quality for the client to select the desired pictures for editing. In case of client wishing to purchase all RAW photos they can acquire them for 1000 QAR.</p>
+        <p class="ar-text"><strong>الصور الغير معدلة</strong><br>
+        الغرض من الصور الغير معدلة هو المعاينة فقط وسيتم توفير الصور بجودة منخفضة حتى يسهل على العميل اختيار الصور التى يرغب فى تعديلها.<br>
+        في حالة رغبة العميل في شراء جميع الصور الخام ممكن توفيرها مقابل 1000 ريال قطري.</p>
+
+        <h4>7. Client's Usage</h4>
+        <p>The Client shall only use the prints, including digital files, in accordance with the permissions within this agreement. The Client's prints are for personal use only and shall not be submitted to contests, reproduced for commercial use or authorize any reproductions by parties other than the Photographer. If the Photographer provides a digital file print release, the Client must act in accordance with the release.</p>
+        <p class="ar-text"><strong>استخدام العميل</strong><br>
+        لا يجوز للعميل استخدام المطبوعات، بما في ذلك الملفات الرقمية، إلا وفقًا للأذونات الواردة في هذه الاتفاقية. مطبوعات العميل للاستخدام الشخصي فقط ولا يجوز تقديمها للمسابقات أو إعادة إنتاجها للاستخدام التجاري أو التصريح بأي نسخ من قبل أطراف أخرى غير المصور. إذا قدم المصور إصدار طباعة ملف رقمي، يجب على العميل التصرف وفقاً للإصدار</p>
+
+        <h4>8. Rescheduling / Late Arrivals / Cancellation</h4>
+        <p>If the Client needs to reschedule a session, the deposit will be applied to the rescheduled session provided that notice is given at least 3 days in advance. Any rescheduling request made less than 3 days before the session will result in the forfeiture of the deposit.</p>
+        <p>Rescheduled sessions must occur within 6 months from the original date, and a session can only be rescheduled twice. For any third rescheduling, a new deposit will be required.</p>
+        <p>If the session is canceled, the deposit will be refunded only if the cancellation is made at least 5 days before the scheduled session.</p>
+        <p>In respect of the photographer's time, please note that if you are more than 30 - 45 minutes late, your session may be canceled, or you will be charged on a pro-rata basis of 350 QAR per hour on top of your session. In respect to last minute sessions that are being booked within less than the 3 days for rescheduling and 5 days for cancellation policy, any cancellation or rescheduling will result in forfeiture of the deposit.</p>
+        <p class="ar-text"><strong>إعادة جدولة او إلغاء الجلسة والتأخير في الوصول</strong><br>
+        إذا احتاج العميل إلى إعادة جدولة الجلسة، فسيتم تطبيق الإيداع على الجلسة التي تمت إعادة جدولتها شريطة تقديم إشعار قبل 3 أيام على الأقل. أي طلب إعادة جدولة يتم تقديمه قبل أقل من 3 أيام من موعد الجلسة سيؤدي إلى مصادرة العربون.<br>
+        يجب أن تتم إعادة جدولة الجلسات في غضون 6 أشهر من التاريخ الأصلي، ولا يمكن إعادة جدولة الجلسة إلا مرتين فقط. بالنسبة لأي إعادة جدولة ثالثة، سيُطلب إيداع مبلغ جديد.<br>
+        إذا تم إلغاء الجلسة، فلن يتم استرداد العربون إلا إذا تم الإلغاء قبل 5 أيام على الأقل من موعد الجلسة المقررة.<br>
+        فيما يتعلق بوقت المصور، يرجى ملاحظة أنه إذا تأخرت أكثر من ٣٠-٤٥ دقيقة عن موعد الجلسة، فقد يتم إلغاء جلستك أو سيتم تحصيل رسوم على أساس تناسبي بقيمة ٣٥٠ ريال قطري عن كل ساعة بالإضافة إلى جلستك.<br>
+        فيما يتعلق بالجلسات التي تُحجز في اللحظة الأخيرة (أي خلال أقل من 3 أيام لإعادة الجدولة و5 أيام للإلغاء)، فإن أي إلغاء أو إعادة جدولة سيؤدي إلى فقدان عربون الحجز.</p>
+
+        <h4>9. Circumstances</h4>
+        <p>If the Photographer is unable to perform the session due to baby's disposition, You Baby Studio cannot be responsible for non-cooperation of the baby, the Client can request to be reschedule at Photographer's discretion on case by case.</p>
+        <p class="ar-text"><strong>الظروف أثناء الجلسة</strong><br>
+        إذا كانت المصورة غير قادرة على أداء الجلسة بسبب تصرف الطفل، لا يمكن أن يكون يو بيبي استوديو مسؤولاً عن عدم تعاون الطفل ويمكن للعميل طلب إعادة جدولة الجلسة حسب تقدير المصورة حسب كل حالة على حدة</p>
+
+        <h4>10. Assumption of Risk using Paint during Gender Reveal Session ( if applicable )</h4>
+        <p>By signing this form, you acknowledge and agree that the use of paint during the Gender Reveal photoshoot is a potential risk of damage to your personal belongings, including but not limited to clothing, accessories, and electronic devices.</p>
+        <p>You voluntarily assume all risks associated with the use of paint in the session and understand that You+Baby Studio is not responsible for any damage caused to personal property during or after the photoshoot.</p>
+        <p class="ar-text"><strong>افتراض المخاطرة اثناء استخدام الطلاء أثناء جلسة الكشف عن الجنس (إن أمكن)</strong><br>
+        بالتوقيع على هذا النموذج، فإنك تقرين وتوافقين على أن استخدام الطلاء أثناء جلسة تصوير الكشف عن جنس المولود ينطوي على مخاطر محتملة من تلف لمتعلقاتك الشخصية، بما في ذلك على سبيل المثال لا الحصر الملابس والإكسسوارات والأجهزة الإلكترونية.<br>
+        و تفهمين آن يو بيبي استديو غير مسؤول عن أي ضرر يلحق لاي متعلقات شخصية اثناء او بعد الجلسة وانك تتحمل طواعية جميع المخاطر المرتبطة باستخدام الطلاء في الجلسة.</p>
+
+        <h4>11. Printed Products</h4>
+        <p>Printed products will be produced and delivered up to 5 Weeks since the client has confirmed the final draft of the albums or any other product.</p>
+        <p class="ar-text"><strong>المنتجات المطبوعة</strong><br>
+        سيتم إنتاج المنتجات المطبوعة وتسليمها خلال 37 يوم عمل منذ تأكيد العميل على المسودة النهائية للألبومات أو أي منتج آخر.</p>
+
+        <h4>12. Gift Card</h4>
+        <p>Purchased gift cards must be redeemed within 12 months from the purchase date. The gift card value is non-refundable and cannot be exchanged for cash. The recipient can reschedule free of charge with a minimum of 3 days' notice. Rescheduling with less than 3 days' notice or a second reschedule will incur a fee of 350 QAR.</p>
+        <p>Gift cards are valid for one person only and can be used within one session booked. Any remaining value after booking the session will not be refunded or carried forward, but can be used on the day of the session toward printed products or other services provided by the studio.</p>
+        <p>If, within the 12-month validity period, the package or services listed on the gift card are no longer applicable - such as changes due to the baby's age or service updated - the gift card will be treated as a credit equal to the original purchase amount, which can be redeemed toward the most relevant available package and any add-ons at the time of booking.</p>
+        <p class="ar-text"><strong>بطاقة الهدية</strong><br>
+        بطاقات الهدايا المشتراة يجب آن تستخدم خلال 12 شهرًا من تاريخ الشراء وقيمة بطاقة الهدايا غير قابلة للاسترداد ولا يمكن استبدالها نقدًا وايضا يمكن للمستلم إعادة الجدولة مجانًا مرة واحدة فقط اذا تم ابلاغنا قبل 3 أيام على الأقل من يوم الجلسة.<br>
+        اما إعادة الجدولة خلال فترة أقل من 3 أيام أو إعادة الجدولة للمرة الثانية في المطلق ستؤدي إلى فرض رسوم قدرها 350 ريال قطري.<br>
+        بطاقات الهدايا صالحة لشخص واحد فقط، ويمكن استخدامها في جلسة واحدة محجوزة. أي رصيد متبقٍ بعد حجز الجلسة لن يُسترد أو يُرحّل، ولكن يمكن استخدامه في نفس يوم الجلسة لشراء المنتجات المطبوعة أو الخدمات الأخرى التي يقدمها الاستوديو.<br>
+        في حال، وخلال فترة الصلاحية البالغة 12 شهرًا، لم تعد الباقة أو الخدمات المذكورة في بطاقة الهدية متاحة — مثل التغييرات الناتجة عن عمر الطفل أو تحديثات الخدمات — فستُعامل بطاقة الهدية كرصيد مساوٍ لقيمة الشراء الأصلية، ويمكن استخدامه لحجز أقرب باقة متاحة مشابهة مع أي إضافات عند إجراء الحجز.</p>
+
+        <h4>13. Payment</h4>
+        <p>The Client shall make a non-refundable payment to the studio after the session, and the pictures will be released only after the payment is received.</p>
+        <p class="ar-text"><strong>الدفع</strong><br>
+        يجب على العميل سداد دفعة غير قابلة للاسترداد إلى الأستوديو بعد الجلسة، ولن يتم إصدار الصور إلا بعد استلام الدفعة.</p>
+
+        <h4>14. USB</h4>
+        <p>The USB included in some of the packages shall be picked up by the client from the studio, or delivery fees can be applied in case of delivery upon request.</p>
+        <p class="ar-text"><strong>اليو اس بي</strong><br>
+        بالنسبة لليو اس بي التي تتضمنه بعض باقاتنا فانه يتم استلامه من قبل العميل من داخل الاستديو ومتاح خدمة توصيل بتكلفة اضافية عند الطلب</p>
+
+        <h4>Client Privacy and Image Usage Policy / سياسة خصوصية العملاء واستخدام الصور</h4>
+        <p>We are committed to respecting and protecting the privacy of our clients. Any photographs taken in our studio will not be used for social media, promotional materials, or printed publications without the client's explicit prior consent.</p>
+        <p>All client images are handled with strict confidentiality and are not shared with any individuals outside of our organization, except for approved personnel at partner printing companies, solely for the purpose of fulfilling print orders.</p>
+        <p class="ar-text">نحن ملتزمون باحترام خصوصية عملائنا وحمايتها. لن يتم استخدام أي صور يتم التقاطها في استوديوهاتنا على وسائل التواصل الاجتماعي أو المواد الترويجية أو المنشورات المطبوعة دون الحصول على موافقة صريحة ومسبقة من العميل.<br>
+        تُعامل جميع صور العملاء بسرية تامة، ولا يتم مشاركتها مع أي أطراف خارج منظمتنا، باستثناء الموظفين المعتمدين في شركات الطباعة المتعاونة، وذلك فقط لغرض تنفيذ طلبات الطباعة.</p>
+
+        <h4>Home Service Terms &amp; Policies / شروط وسياسات الخدمة المنزلية</h4>
+        <p><strong>1. Liability &amp; Risks:</strong> The studio is not liable for property damage, injuries, or accidents that may occur during home service sessions unless caused by gross negligence of the studio team.</p>
+        <p class="ar-text"><strong>المسؤولية والمخاطر:</strong> لا يتحمل الاستوديو المسؤولية عن أي أضرار في الممتلكات أو إصابات أو حوادث قد تحدث أثناء جلسات الخدمة المنزلية، إلا إذا كانت ناجمة عن إهمال جسيم من فريق الاستوديو.</p>
+        <p><strong>2. Safe Environment:</strong> Clients are responsible for ensuring a safe environment for the session. Any hazards such as unstable surfaces, pets, or fragile items must be addressed before the team arrives.</p>
+        <p class="ar-text"><strong>البيئة الآمنة:</strong> يقع على عاتق العملاء ضمان توفير بيئة آمنة للجلسة. يجب معالجة أي مخاطر مثل الأسطح غير المستقرة أو الحيوانات الأليفة أو العناصر القابلة للكسر قبل وصول الفريق.</p>
+        <p><strong>3. Responsibility for Personal Belongings:</strong> The studio and its staff are not responsible for the loss, damage, or misplacement of any personal belongings during sessions.</p>
+        <p class="ar-text"><strong>المسؤولية عن المتعلقات الشخصية:</strong> لا يتحمل الاستوديو وموظفوه مسؤولية فقدان أو تلف أو ضياع أي متعلقات شخصية أثناء الجلسات.</p>
+        <p><strong>4. Parental Supervision:</strong> For newborn or children's photography, clients must provide continuous supervision and assume full responsibility for their child(ren) during the session.</p>
+        <p class="ar-text"><strong>الإشراف الأبوي:</strong> بالنسبة لتصوير الأطفال حديثي الولادة أو الأطفال، يجب على العملاء توفير الإشراف المستمر وتحمل المسؤولية الكاملة عن أطفالهم خلال الجلسة.</p>
+        <p><strong>5. Health and Safety:</strong> The client affirms their household is free of infectious diseases or illnesses at the time of the session. The studio team reserves the right to end the session if the environment poses risks to their safety or equipment.</p>
+        <p class="ar-text"><strong>الصحة والسلامة:</strong> يؤكد العميل أن منزله خالٍ من الأمراض المعدية أو الحالات المرضية في وقت الجلسة.</p>
+        <p><strong>6. Indemnification:</strong> Clients agree to indemnify the studio and its staff against claims or damages arising from the session, except in cases of gross negligence or willful misconduct.</p>
+        <p class="ar-text"><strong>التعويض:</strong> يوافق العملاء على تعويض الاستوديو وموظفيه عن أي مطالبات أو أضرار تنشأ عن الجلسة، باستثناء الحالات الناجمة عن الإهمال الجسيم أو سوء التصرف المتعمد.</p>
+
+        <h4>Service &amp; Refunds Policies / سياسات الخدمة والاسترداد</h4>
+        <p>1. Refunds are only considered if the studio is at fault, including failure to deliver promised services or significant quality issues.</p>
+        <p class="ar-text">يتم النظر في استرداد الأموال فقط إذا كان الخطأ من الاستوديو، بما في ذلك الفشل في تقديم الخدمات الموعودة أو وجود مشكلات كبيرة في الجودة.</p>
+        <p>2. Artistic elements such as themes, poses, and styling are subjective. If these aspects were pre-approved by the client, dissatisfaction with the final outcome does not warrant a refund.</p>
+        <p class="ar-text">العناصر الفنية مثل الثيمات، الوضعيات، والتصميمات تعتبر ذاتية. إذا تمت الموافقة على هذه الجوانب مسبقًا من قبل العميل، فإن عدم الرضا عن النتيجة النهائية لا يبرر استرداد الأموال.</p>
+        <p>Refunds do not apply to non-refundable charges, including: Booking deposits, as they represent a minimum reservation fee for securing the studio's services. Fees for services already rendered, such as delivered photos or videos completed sessions.</p>
+        <p class="ar-text">لا تنطبق الاستردادات على الرسوم غير القابلة للاسترداد، بما في ذلك: العربون، ورسوم الخدمات المقدمة بالفعل.</p>
+        <p>3. Refunds are not granted if dissatisfaction arises from: A client's change of mind regarding the agreed theme or styling. Delays or issues caused by the client, such as late arrivals or failure to select photos within the agreed timeline.</p>
+        <p class="ar-text">لا يتم منح الاستردادات إذا نشأ عدم الرضا عن تغير رأي العميل أو التأخيرات التي تسببها العميلة.</p>
+        <p>4. The studio is not liable for cancellations or rescheduling due to unforeseen circumstances beyond its control, such as natural disasters or emergencies.</p>
+        <p class="ar-text">لا يتحمل الاستوديو المسؤولية عن الإلغاءات أو إعادة الجدولة بسبب ظروف غير متوقعة خارجة عن إرادته.</p>
+        <p>5. Printed products are non-refundable once the client approves the mock-up or design and the order is sent for printing.</p>
+        <p class="ar-text">المنتجات المطبوعة غير قابلة للاسترداد بمجرد موافقة العميل على المسودة وإرسال الطلب للطباعة.</p>
+        <p>6. Video Reel - Once the edited video reel has been delivered to the client, no refunds will be provided. Clients may request maximum up to three rounds of free edits.</p>
+        <p class="ar-text">مقاطع الفيديو - بمجرد تسليم مقطع الفيديو المعدل إلى العميل، لن يتم توفير أي استرداد. يمكن للعملاء طلب ما يصل إلى ثلاث جولات كحد أقصى من التعديلات المجانية.</p>
+
+        <h4>Redo Session Policy / قواعد و قوانين إعادة جلسة التصوير</h4>
+        <p>1. Eligibility &amp; Booking Window: A Redo session may be granted only with prior management approval and is subject to specific conditions. Once approved, the session must be booked within two weeks (and no later than one month) from the date of the original session. Redo sessions are available on weekdays only.</p>
+        <p>2. Location &amp; Additional Fees: All Redo sessions are to be conducted in-studio only. If a client requests a home service, additional home service fees will apply.</p>
+        <p>3. Rescheduling Policy: Clients are allowed to reschedule a Redo session once without charge. However, if a second rescheduling is requested: A non-refundable fee of QAR 350 + VAT will be required to book a new slot. If the second rescheduling falls more than one month after the original session date, the request may be subject to cancellation.</p>
+        <p>4. Non-Refundable Policy: Payments made for Redo session slots are non-refundable and are considered as a booking and time reservation fee only.</p>
+        <p class="ar-text"><strong>قواعد و قوانين إعادة جلسة التصوير</strong><br>
+        ١)- الإستحقاق و نافذة التوقيت للحجز: إعادة تصوير الجلسة قد يتم الموافقة عليها مسبقا فقط من قبل الإدارة و تخضع لشروط خاصة. بعد الموافقة على إعادة التصوير، يجب أن يتم حجز الجلسة فى خلال أسبوعين (و مدة لا تتعدى الشهر) من يوم الجلسة الأساسية. جلسات إعادة التصوير متاح تصويرها فقط خلال أيام الأسبوع.<br>
+        ٢)- الموقع و المصاريف الإضافية: كل جلسات إعادة التصوير يتم تصويرها فقط فى الإستوديو. إذا رغب العميل فى تصوير الجلسة بالمنزل، يتم إضافة مصاريف الخدمة المنزلية حسب الموقع.<br>
+        ٣)- سياسة إعادة جدولة الجلسة: مسموح للعميل بإعادة جدولة جلسة إعادة التصوير مرة واحدة فقط بدون أى مصارف إضافية. لكن فى حالة إعادة جدولة الميعاد أكثر من مرة يقوم العميل بدفع ٣٥٠ ريال قطري + الضريبة (غير قابلة للإسترجاع) لحجز ميعاد جديد.<br>
+        ٤)- سياسة عدم الإسترجاع: المدفوعات اللى يتم دفعها لحجز ميعاد لجلسة إعادة التصوير هى غير قابلة للإسترداد و يتم إعتبارها على أنها عمولة لحجز التوقيت فقط.</p>
+
+        <h4>Signature / التوقيع</h4>
+        <p>By signing this letter, you, the undersigned parents, acknowledge that you have read, understood, and accepted the limitation of liability outlined above. You further agree not to hold us responsible for any injuries, damages, losses, or liabilities that may occur during or as a result of the Session.</p>
+        <p class="ar-text">بتوقيعكم على هذه الرسالة، تقرون أنتم، أولياء الأمور الموقعين أدناه، بأنكم قد قرأتم وفهمتم وقبلتم حدود المسؤولية الموضحة أعلاه. كما توافقون على عدم تحميلنا المسؤولية عن أي إصابات أو أضرار أو خسائر أو التزامات قد تحدث</p>
+      </div>
+      <div class="tc-scroll-hint">↕ Scroll to read full terms / مرر للقراءة الكاملة</div>
+
+      <div class="field" id="field-tcAgree">
+        <label class="checkbox-label">
+          <input type="checkbox" id="tcAgree" name="tcAgree">
+          <div class="custom-checkbox"></div>
+          <span>I have read and understand the limitation of liability outlined above. / لقد قرأت وأفهم حدود المسؤولية الموضحة أعلاه. <span class="req">*</span></span>
+        </label>
+        <div class="error-msg" id="err-tcAgree">You must agree to the terms to proceed</div>
+      </div>
+
+      <div class="field" id="field-signature">
+        <label>Signature / التوقيع <span class="req">*</span></label>
+        <div class="sig-area">
+          <canvas id="sigCanvas"></canvas>
+        </div>
+        <div class="sig-actions">
+          <button type="button" class="sig-clear" onclick="clearSignature()">Clear / مسح</button>
+        </div>
+        <div class="sig-hint">Sign with your finger / وقّع بإصبعك</div>
+        <div class="error-msg" id="err-signature">Please provide your signature</div>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn" id="submitBtn">
+      Submit & Proceed to Payment →
+    </button>
+    <p class="submit-note">
+      After submitting you will be redirected to complete your deposit payment.<br>
+      بعد الإرسال سيتم توجيهك لإتمام دفع العربون.
+    </p>
+
+  </form>
+
+  <div class="success-screen" id="successScreen">
+    <div class="success-icon">✓</div>
+    <h2>Form Submitted!</h2>
+    <p>Thank you. Your information has been saved and a PDF copy has been generated.<br>Redirecting you to payment...</p>
+  </div>
+
+</div>
+
+<script>
+// ─── CONFIGURATION ───────────────────────────────────────────────────────────
+// Replace these with your actual values:
+const CONFIG = {
+  // Google Apps Script Web App URL (you'll get this after deploying the script)
+  APPS_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyqUI3yqJEbC8m7vg1IIxcQa-yFm1AtsshPHzHeJt42uGv_K_LVBe_Ogjj0Av_24RgA/exec',
+
+  // Stripe payment link for Qatar
+  STRIPE_PAYMENT_LINK: 'https://book.stripe.com/3csbKJ2rfftSe08e1T',
+
+  // Google Drive folder ID for PDFs (optional - set in Apps Script)
+  DRIVE_FOLDER_ID: 'YOUR_FOLDER_ID'
+};
+
+// ─── BABY SECTION TOGGLE ─────────────────────────────────────────────────────
+function toggleBabySection(val) {
+  const section = document.getElementById('section-baby');
+  const isBaby = val && val !== 'Others';
+  section.style.display = isBaby ? 'block' : 'none';
+  if (!isBaby) {
+    document.getElementById('babyBirthDate').value = '';
+    document.getElementById('babyName').value = '';
+    document.getElementById('babyGender').value = '';
+    document.getElementById('babyWeight').value = '';
+    document.getElementById('weeksBorn').value = '';
+    document.getElementById('complications').value = '';
+    document.getElementById('otherHealth').value = '';
+    document.querySelectorAll('input[name="nicu"], input[name="circumcised"]').forEach(r => r.checked = false);
+    ['babyBirthDate','babyName','babyGender','babyWeight','weeksBorn','complications','nicu','circumcised'].forEach(clearError);
+  }
+}
+
+// ─── SIGNATURE PAD ───────────────────────────────────────────────────────────
+const canvas = document.getElementById('sigCanvas');
+const ctx = canvas.getContext('2d');
+let isDrawing = false;
+let hasSigned = false;
+let lastX = 0, lastY = 0;
+
+function resizeCanvas() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  const w = rect.width || canvas.parentElement.offsetWidth || 300;
+  const dpr = window.devicePixelRatio || 1;
+  // Сохраняем текущий рисунок
+  const imgData = hasSigned ? canvas.toDataURL() : null;
+  canvas.width = w * dpr;
+  canvas.height = 130 * dpr;
+  canvas.style.width = w + 'px';
+  canvas.style.height = '130px';
+  ctx.scale(dpr, dpr);
+  ctx.strokeStyle = '#1C1C1A';
+  ctx.lineWidth = 2.5;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  // Восстанавливаем рисунок если был
+  if (imgData) {
+    const img = new Image();
+    img.onload = () => ctx.drawImage(img, 0, 0, w, 130);
+    img.src = imgData;
+  }
+}
+// Запускаем resize после полной загрузки страницы
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', resizeCanvas);
+} else {
+  resizeCanvas();
+}
+setTimeout(resizeCanvas, 300); // страховка для мобильных
+window.addEventListener('resize', resizeCanvas);
+
+function getPos(e) {
+  const rect = canvas.getBoundingClientRect();
+  const src = e.touches ? e.touches[0] : e;
+  // Используем точные координаты с учётом скролла и масштаба
+  const scaleX = canvas.width / (window.devicePixelRatio || 1) / rect.width;
+  const scaleY = canvas.height / (window.devicePixelRatio || 1) / rect.height;
+  return {
+    x: (src.clientX - rect.left) * scaleX,
+    y: (src.clientY - rect.top) * scaleY
+  };
+}
+
+canvas.addEventListener('mousedown', e => { e.preventDefault(); isDrawing = true; const p = getPos(e); lastX = p.x; lastY = p.y; });
+canvas.addEventListener('mousemove', e => {
+  if (!isDrawing) return;
+  const p = getPos(e);
+  ctx.beginPath(); ctx.moveTo(lastX, lastY); ctx.lineTo(p.x, p.y); ctx.stroke();
+  lastX = p.x; lastY = p.y; hasSigned = true;
+});
+canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener('mouseleave', () => isDrawing = false);
+
+canvas.addEventListener('touchstart', e => {
+  e.preventDefault();
+  e.stopPropagation();
+  isDrawing = true;
+  const p = getPos(e);
+  lastX = p.x; lastY = p.y;
+  // Ставим точку при касании
+  ctx.beginPath();
+  ctx.arc(p.x, p.y, 1, 0, Math.PI * 2);
+  ctx.fill();
+}, { passive: false });
+
+canvas.addEventListener('touchmove', e => {
+  e.preventDefault();
+  e.stopPropagation();
+  if (!isDrawing) return;
+  const p = getPos(e);
+  ctx.beginPath(); ctx.moveTo(lastX, lastY); ctx.lineTo(p.x, p.y); ctx.stroke();
+  lastX = p.x; lastY = p.y; hasSigned = true;
+}, { passive: false });
+
+canvas.addEventListener('touchend', e => {
+  e.preventDefault();
+  isDrawing = false;
+}, { passive: false });
+
+canvas.addEventListener('touchcancel', () => isDrawing = false);
+
+function clearSignature() {
+  ctx.clearRect(0, 0, canvas.width / (window.devicePixelRatio||1), canvas.height / (window.devicePixelRatio||1));
+  hasSigned = false;
+}
+
+// ─── FORM VALIDATION ─────────────────────────────────────────────────────────
+function showError(id, msg) {
+  const el = document.getElementById('err-' + id);
+  if (el) { el.style.display = 'block'; el.textContent = msg || el.textContent; }
+  const field = document.getElementById('field-' + id);
+  if (field) field.classList.add('has-error');
+}
+function clearError(id) {
+  const el = document.getElementById('err-' + id);
+  if (el) el.style.display = 'none';
+  const field = document.getElementById('field-' + id);
+  if (field) field.classList.remove('has-error');
+}
+
+function validateForm() {
+  let valid = true;
+  const errors = [];
+
+  const firstName = document.getElementById('firstName').value.trim();
+  if (!firstName) { showError('name', 'Please enter your first name'); valid = false; errors.push('name'); }
+  else clearError('name');
+
+  const email = document.getElementById('email').value.trim();
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('email'); valid = false; errors.push('email'); }
+  else clearError('email');
+
+  const phone = document.getElementById('phone').value.trim();
+  if (!phone) { showError('phone'); valid = false; errors.push('phone'); }
+  else clearError('phone');
+
+  const firstSession = document.querySelector('input[name="firstSession"]:checked');
+  if (!firstSession) { showError('firstSession'); valid = false; errors.push('firstSession'); }
+  else clearError('firstSession');
+
+  const sessionType = document.getElementById('sessionType').value;
+  if (!sessionType) { showError('sessionType'); valid = false; errors.push('sessionType'); }
+  else clearError('sessionType');
+
+  const isBabySession = sessionType && sessionType !== 'Others';
+
+  if (isBabySession) {
+    const babyBirthDate = document.getElementById('babyBirthDate').value;
+    if (!babyBirthDate) { showError('babyBirthDate'); valid = false; errors.push('babyBirthDate'); }
+    else clearError('babyBirthDate');
+
+    const babyName = document.getElementById('babyName').value.trim();
+    if (!babyName) { showError('babyName'); valid = false; errors.push('babyName'); }
+    else clearError('babyName');
+
+    const babyGender = document.getElementById('babyGender').value;
+    if (!babyGender) { showError('babyGender'); valid = false; errors.push('babyGender'); }
+    else clearError('babyGender');
+
+    const babyWeight = document.getElementById('babyWeight').value.trim();
+    if (!babyWeight) { showError('babyWeight'); valid = false; errors.push('babyWeight'); }
+    else clearError('babyWeight');
+
+    const weeksBorn = document.getElementById('weeksBorn').value.trim();
+    if (!weeksBorn) { showError('weeksBorn'); valid = false; errors.push('weeksBorn'); }
+    else clearError('weeksBorn');
+
+    const complications = document.getElementById('complications').value.trim();
+    if (!complications) { showError('complications'); valid = false; errors.push('complications'); }
+    else clearError('complications');
+
+    const nicu = document.querySelector('input[name="nicu"]:checked');
+    if (!nicu) { showError('nicu'); valid = false; errors.push('nicu'); }
+    else clearError('nicu');
+
+    const circumcised = document.querySelector('input[name="circumcised"]:checked');
+    if (!circumcised) { showError('circumcised'); valid = false; errors.push('circumcised'); }
+    else clearError('circumcised');
+  } else {
+    ['babyBirthDate','babyName','babyGender','babyWeight','weeksBorn','complications','nicu','circumcised'].forEach(clearError);
+  }
+
+  const tcAgree = document.getElementById('tcAgree').checked;
+  if (!tcAgree) { showError('tcAgree'); valid = false; errors.push('tcAgree'); }
+  else clearError('tcAgree');
+
+  if (!hasSigned) { showError('signature', 'Please provide your signature'); valid = false; errors.push('signature'); }
+  else clearError('signature');
+
+  if (!valid && errors.length > 0) {
+    const firstErr = document.getElementById('field-' + errors[0]) || document.getElementById('err-' + errors[0]);
+    if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  return valid;
+}
+
+// ─── COLLECT FORM DATA ───────────────────────────────────────────────────────
+function collectData() {
+  const title = document.getElementById('title').value;
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const phoneCode = document.getElementById('phoneCode').value;
+  const sessionType = document.getElementById('sessionType').value;
+  const isBabySession = sessionType && sessionType !== 'Others';
+
+  return {
+    timestamp: new Date().toISOString(),
+    title,
+    firstName,
+    lastName,
+    fullName: [title, firstName, lastName].filter(Boolean).join(' '),
+    email: document.getElementById('email').value.trim(),
+    phone: phoneCode + document.getElementById('phone').value.trim(),
+    firstSession: document.querySelector('input[name="firstSession"]:checked')?.value || '',
+    sessionType,
+    babyBirthDate: isBabySession ? document.getElementById('babyBirthDate').value : '',
+    babyName: isBabySession ? document.getElementById('babyName').value.trim() : '',
+    babyGender: isBabySession ? document.getElementById('babyGender').value : '',
+    babyWeight: isBabySession ? document.getElementById('babyWeight').value.trim() : '',
+    weeksAtBirth: isBabySession ? document.getElementById('weeksBorn').value.trim() : '',
+    deliveryComplications: isBabySession ? document.getElementById('complications').value.trim() : '',
+    nicuAdmission: isBabySession ? (document.querySelector('input[name="nicu"]:checked')?.value || '') : '',
+    recentlyCircumcised: isBabySession ? (document.querySelector('input[name="circumcised"]:checked')?.value || '') : '',
+    otherHealthNotes: isBabySession ? document.getElementById('otherHealth').value.trim() : '',
+    termsAgreed: 'I have read and understand the limitation of liability outlined above.',
+    signatureData: canvas.toDataURL('image/png'),
+    location: 'Qatar'
+  };
+}
+
+// ─── FORM SUBMIT ─────────────────────────────────────────────────────────────
+document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  if (!validateForm()) return;
+
+  const overlay = document.getElementById('loadingOverlay');
+  overlay.classList.add('active');
+  document.getElementById('submitBtn').disabled = true;
+
+  const data = collectData();
+
+  try {
+    await fetch(CONFIG.APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+  } catch (err) {
+    console.error('Submission error:', err);
+  }
+
+  overlay.classList.remove('active');
+  document.getElementById('bookingForm').style.display = 'none';
+  document.getElementById('successScreen').style.display = 'block';
+
+  setTimeout(() => {
+    window.location.href = CONFIG.STRIPE_PAYMENT_LINK;
+  }, 2000);
+});
+</script>
+</body>
+</html>
